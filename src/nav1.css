@@ -1,0 +1,327 @@
+/* src/components/Navbar.css */
+/* .navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .navbar-container {
+    display: flex;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #170707;
+    justify-content: flex-start;
+    
+    
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0 10px;
+  }
+  
+  .navbar-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+  }
+  
+  .navbar-actions .btn-login {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .navbar-actions .btn-login:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  /* @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #ffffff;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .menu-toggle:checked + .menu-icon + .navbar-menu {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .navbar-item {
+      margin: 15px 0;
+      text-align: center;
+    }
+  }  */
+
+  /* Basic styling for the navbar */
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 0.5rem;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: #007bff;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-login, .btn-logout {
+  margin: 0 0.5rem;
+}
+
+/* Responsive styles for mobile screens */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+  
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensures video stays behind content */
+}
+
+.Home {
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+  width: 100%;
+  height: 100%;
+  color: white; /* Adjust text color for better visibility */
+  text-shadow: 1px 1px 2px black; /* Optional: text shadow for better readability */
+}
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* Ensure content is above the video */
+}
+
+
+
+
+.display-4 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+.lead {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #17d84e;
+}
+
+.input-group .form-control {
+  border-radius: 20px 0 0 20px;
+}
+
+.input-group .btn-primary {
+  border-radius: 0 20px 20px 0;
+  color: #170707;
+}
+
+.btn-secondary {
+  background-color: #555;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.container{
+  background: none;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* src/styles/CustomCard.css */
+.custom-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.custom-card .card-body {
+  padding: 1.5rem;
+}
+
+.custom-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.custom-card .card-text {
+  color: #6c757d;
+}
+
+.custom-card .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+fixed-card {
+  width: 100%; /* Makes the card take full width of its column */
+  max-width: 300px; /* Sets a maximum width for the card */
+  height: 400px; /* Fixed height for the card */
+  overflow: hidden; /* Ensures that content doesn't overflow the card's boundaries */
+  margin: auto; /* Centers the card horizontally in its column */
+}
+
+.fixed-card img {
+  width: 100%; /* Image takes full width of the card */
+  height: 300px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}

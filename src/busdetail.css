@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    color: #fff;
+    font-size: 55px;
+    margin: 80px 0;
+}
+.swiper {
+    width: 80%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
+  }
+
+  .Main{
+    background-image: url('images/front-view-cool-traveler-man-with-red-backpack-holding-travel-ticket-yellow\ \(1\).jpg'); /* Replace with your image URL */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+ /* src/App.css */
+.card-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.bus-name {
+  font-weight: 700; /* Bold font weight for the bus name */
+  color: #333; /* Dark color for the bus name */
+  margin-bottom: 1rem;
+}
+
+.bus-detail {
+  font-weight: 800; /* Regular font weight for details */
+  color: #02978d; /* Medium-dark color for details */
+  margin-bottom: 0.5rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bus-owner,
+.bus-contact {
+  font-weight: 800; /* Medium font weight for emphasis */
+  color: #02978d; /* Bootstrap's primary color */
+  margin-bottom: 0.5rem;
+  font-family: 'Times New Roman', Times, serif;
+
+}

@@ -1,0 +1,35 @@
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.cont{
+  background-color: azure;
+  border-radius: 8px ;
+  border: 2px solid green;
+  width: 600px;
+  margin-left: 500px;
+  margin-top:200px ;
+}
+.inp{
+  width: 200px;
+  height: 50px;
+  background-color: aliceblue;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px 2px;
+  margin: 10px;
+}
+.but{
+  width: 100px;
+  height: 40px;
+  background-color: rgba(9, 201, 118, 0.545);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  border-radius: 10px;
+
+}
+.but :hover{
+  background-color: bisque;
+}
