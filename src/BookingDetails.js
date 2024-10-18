@@ -187,7 +187,7 @@ const Booked=async(coll)=>{
     const [error, setError] = useState('');
 
     // Replace with your own API key
-    const API_KEY = '2d4133acb4b0ac56677180d84f70215c';
+    const API_KEY ="";//removed api key
 
     const fetchWeather = async (city1) => {
         try {
