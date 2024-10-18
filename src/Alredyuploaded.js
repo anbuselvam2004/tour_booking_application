@@ -42,7 +42,7 @@ function Uploaded() {
       <div className="d-flex  justify-content-center align-items-center m-4">
         {/* Conditional rendering based on admin state */}
         {admin ? (
-          <h3 className="text-danger " >!!!You have already uploaded the bus named {admin.busname}</h3>
+          <h3 className="text-danger " >!!!You have already uploaded the bus named.  {admin.busname}</h3>
         ) : (
           <p>Loading bus information...</p>
         )}
