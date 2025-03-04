@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img from './images/download (4).jpeg'
 import { Link ,useNavigate} from 'react-router-dom';
 import Nav from './NavAdmin'
 import Footer from './footall'
 import { auth, db } from './config/firebase';
-import { collection, doc, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 export default function Seedetails()
 {
@@ -55,7 +54,7 @@ fetchdetail();
                 <div className='row py-5'>
                     
                     <div className='card col-md-3'>
-                        <img src={data.url}></img>
+                        <img src={data.url} alt="temp"></img>
                     </div>
                     <div className='col-md-3'>
                         <div className='card-body'>

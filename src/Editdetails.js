@@ -10,7 +10,7 @@ export default function Edit(){
 
     const [data,setdata]=useState([]);
 
-    const [link1,link2]=useState([]);
+    // const [link1,link2]=useState([]);
     const [id,setid]=useState("");
     const [multipleFiles,setMultipleFiles]=useState([]);
     const [name,newname]=useState("");
@@ -27,6 +27,8 @@ export default function Edit(){
 
     let urlimg;
     let urlsimg=[];
+    console.log(urlimg)
+    console.log(urlsimg)
     useEffect(()=>{
         const fetchdetail=async()=>{
         const dat=auth.currentUser;
@@ -74,7 +76,7 @@ fetchdetail();
 
 
         const dat=auth.currentUser;
-        if(dat.email==email){
+        if(dat.email===email){
         try{
         uploadSingle();
         //--------------------------------------------------------------
@@ -211,26 +213,17 @@ const uploadUrl=(child,multiple)=>{
     }
 }
 
-const deletedoc=()=>{
-    const UrlCollection=doc(db,"ImageUrl",id);
-    try{
-        deleteDoc(UrlCollection);
-    }
-    catch(error){
-        console.error(error);
-    }
+// const deletedoc=()=>{
+//     const UrlCollection=doc(db,"ImageUrl",id);
+//     try{
+//         deleteDoc(UrlCollection);
+//     }
+//     catch(error){
+//         console.error(error);
+//     }
 
-}
-// const geturl= async ()=>{
-//     const data = await getDocs(UrlCollection);
-
-    
-//     const filter=data.docs.map((doc)=>({
-//         ...doc.data(),
-//         id:doc.id,
-//     }))
-//     link2(filter);
 // }
+
 
 
 const handle=()=>{

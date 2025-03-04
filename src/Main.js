@@ -21,7 +21,7 @@ function TicketCard() {
   const [con,setcon]=useState("");
   const [emailid,setemailid]=useState('');
   const form=useRef();
-
+  console.log(emailid)
   const AcceptanceEmail = () => {
     
     emailjs
@@ -143,12 +143,12 @@ function TicketCard() {
           console.log("yes");
           console.log(con);
           await updateDoc(BookStstatus, {
-            stat: "Dear, "+`${name}` + " Your order ["+`${firstDocId}`+"] from  " +`${start}`+" to " + `${end}`+" on "+`${stdate}` +" has been Confirmed. For more enquiry,Call:"+`${con}`+"  Thanking you...!",
+            stat: `Dear, ${name} Your order [${firstDocId}] from   ${start} to  ${end} on ${stdate} to ${edate}  has been Confirmed. For more enquiry,Call: ${con}  Thanking you...!`,
           });
         } else {
           console.log("no");
           await setDoc(BookStstatus, {
-            stat: "Dear, "+`${name}` + " Your order from " +`${start}`+" to " + `${end}`+" on "+`${stdate}` +" has been confirmed. For more enquiry, call the number given on the website.",
+            stat: `Dear, ${name} Your order from ${start} to ${end} on ${stdate} to ${edate} has been confirmed. For more enquiry, call the number given on the website.`,
 
           });
         }
@@ -181,12 +181,12 @@ function TicketCard() {
         if (det.exists()) {
           console.log("yes");
           await updateDoc(BookStstatus, {
-            stat: "Dear, "+`${name}` + " Your order from " +`${start}`+" to " + `${end}`+" on "+`${stdate}` +" has been cancelled. For more enquiry, call the number given on the website.",
+            stat: `Dear, ${name} Your order from ${start} to ${end} on ${stdate} to ${edate} has been cancelled. For more enquiry, call the number given on the website.`,
           });
         } else {
           console.log("no");
           await setDoc(BookStstatus, {
-            stat: "Dear, "+`${name}` + " Your order from " +`${start}`+" to " + `${end}`+" on "+`${stdate}` +" has been cancelled. For more enquiry, call the number given on the website.",
+            stat: `Dear, ${name} Your order from ${start} to ${end} on ${stdate} to ${edate} has been cancelled. For more enquiry, call the number given on the website.`,
 
           });
         }

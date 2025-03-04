@@ -12,7 +12,6 @@ import Footer from './footall';
 
 import './busdetail.css';
 import Gallery from './albums';
-import backgroundImage from './images/bg0.jpg';
 
 
 function Details() {
@@ -21,7 +20,7 @@ function Details() {
     const Navigate=useNavigate();
     const [bool,setbool]=useState(false);
     const {id}=useParams();
-
+    console.log(bool)
     // const id1='aByMXaZdXukfZQV6fNZO';
     const [busData,setBusData]=useState([]);
 

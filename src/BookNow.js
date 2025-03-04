@@ -14,7 +14,7 @@ export function BookNow(){
     const Navigate=useNavigate();
     const [bool,setbool]=useState(false);
     const {id}=useParams();
-
+    console.log(bool)
     // const id1='aByMXaZdXukfZQV6fNZO';
     const [busData,setBusData]=useState([]);
 

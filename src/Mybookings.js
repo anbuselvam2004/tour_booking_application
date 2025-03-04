@@ -14,7 +14,8 @@ export function Mybookings(){
 
     const [busDataList, setBusDataList] = useState([]);
   const [loading, setLoading] = useState(true);
-
+    console.log(busDataList)
+    console.log(loading)
     const fetchBusData=async(userEmail)=>{
         try {
             console.log(userEmail);
@@ -70,18 +71,46 @@ export function Mybookings(){
     }
 
     status();
-    },[])
+    },[hist]);
 
 
     return (
-        <div>
-            <Nav/>
-            <div className="container-fluid booking-status-page d-flex align-items-center justify-content-center">
-            <div className="status-content text-center">
-                            <h1 className="card-title status-text">{currdoc.stat}</h1>
-                            </div>
-                            </div>
-        <Footer/>
-        </div>
-    );
+        
+            <div>
+                <Nav />
+                <div className="container-fluid booking-status-page d-flex align-items-center justify-content-center">
+                    <div className="status-content text-center">
+                        <h1 className="card-title status-text">{currdoc.stat}</h1>
+                    </div>
+                </div>
+        
+                {/* Display booking details */}
+                <div className="container mt-4">
+                    {loading ? (
+                        <p>Loading your bookings...</p>
+                    ) : busDataList.length === 0 ? (
+                        <p>No bookings found.</p>
+                    ) : (
+                        <div className="row">
+                            {busDataList.map((bus, index) => ( 
+                                <div key={index} className="col-md-4 mb-3">
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <h5 className="card-title">{bus.busName}</h5>
+                                            <p className="card-text">Bus Number: {bus.busNumber}</p>
+                                            <p className="card-text">Seats: {bus.seats}</p>
+                                            <p className="card-text">Type: {bus.isAC ? "AC" : "Non-AC"}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+        
+                <Footer />
+            </div>
+        );
+        
+    
 }

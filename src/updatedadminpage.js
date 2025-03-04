@@ -6,7 +6,6 @@ import Nav from "./NavAdmin";
 import busImage from './images/travel (7).jpg'; 
 import { auth, db } from "./config/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import Uploaded from "./Alredyuploaded";
 
 
 export default function Admin()
@@ -16,6 +15,7 @@ export default function Admin()
     const [loading,setLoading]=useState(false);
     const [state,setstate]=useState(false);
     const [admin,setadmin]=useState(null);
+    console.log(admin)
     const Suggests=async()=>{
         setLoading(true);
         const dat=auth.currentUser;

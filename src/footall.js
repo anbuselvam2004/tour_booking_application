@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer className="bg-dark text-white py-5">
@@ -19,10 +19,10 @@ function Footer() {
                     <div className="col-md-3 mb-4">
                         <h5 className="mb-3">Quick Links</h5>
                         <ul className="list-unstyled">
-                            <li><a href="#" className="text-white text-decoration-none">Home</a></li>
-                            <li><a href="#" className="text-white text-decoration-none">Destinations</a></li>
-                            <li><a href="#" className="text-white text-decoration-none">Special Offers</a></li>
-                            <li><a href="#" className="text-white text-decoration-none">FAQs</a></li>
+                            <li><Link to="#" className="text-white text-decoration-none">Home</Link></li>
+                            <li><Link to="#" className="text-white text-decoration-none">Destinations</Link></li>
+                            <li><Link to="#" className="text-white text-decoration-none">Special Offers</Link></li>
+                            <li><Link to="#" className="text-white text-decoration-none">FAQs</Link></li>
                         </ul>
                     </div>
 
@@ -33,10 +33,10 @@ function Footer() {
                         <p>Phone: +123 456 7890</p>
                         <h5 className="mt-4 mb-3">Follow Us</h5>
                         <div>
-                            <a href="#" className="text-white me-2" style={{ fontSize: '1.2rem' }}><i className="fab fa-facebook"></i></a>
-                            <a href="#" className="text-white me-2" style={{ fontSize: '1.2rem' }}><i className="fab fa-twitter"></i></a>
-                            <a href="#" className="text-white me-2" style={{ fontSize: '1.2rem' }}><i className="fab fa-instagram"></i></a>
-                            <a href="#" className="text-white" style={{ fontSize: '1.2rem' }}><i className="fab fa-linkedin"></i></a>
+                            <Link to="#" className="text-white me-2" style={{ fontSize: '1.2rem' }}><i className="fab fa-facebook"></i></Link>
+                            <Link to="#" className="text-white me-2" style={{ fontSize: '1.2rem' }}><i className="fab fa-twitter"></i></Link>
+                            <Link to="#" className="text-white me-2" style={{ fontSize: '1.2rem' }}><i className="fab fa-instagram"></i></Link>
+                            <Link to="#" className="text-white" style={{ fontSize: '1.2rem' }}><i className="fab fa-linkedin"></i></Link>
                         </div>
                     </div>
 

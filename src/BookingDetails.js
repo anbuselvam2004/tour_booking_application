@@ -46,7 +46,7 @@ export default function Booking() {
 
 
     const [getid,setgetid]=useState("");
-
+    console.log(getid)
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -94,7 +94,7 @@ const BookBus=async()=>{
     console.log(docsnap.data());
     const dat=auth.currentUser;
     if(isCheckboxChecked){
-    if(dat.email==email){
+    if(dat.email===email){
     if(docsnap.exists()){
         const fieldvalue=docsnap.data().email;
         setgetid(fieldvalue);

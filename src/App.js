@@ -1,99 +1,3 @@
-// import React,{  useState} from 'react';
-// // import Nav from './nav';
-// // import Navbar from './Navall.js';
-
-// import CardHold from './Card';
-// import videoSource from './images/bgvideo (2).mp4'
-// import  Nav  from './nav1.js';
-// import { db } from './config/firebase';
-// import { onSnapshot,collection } from 'firebase/firestore';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './nav1.css';
-// import Footer from './footall.js';
-//  function App(/*{child}*/){
-    
-//     const [newbuslist,setbuslist]=useState([])
-
-// const imgurl=()=>{
-// const busCollection=collection(db,'ImageUrl');
-// onSnapshot(busCollection,(snapshot)=>{
-//     const buslist=snapshot.docs.map(doc =>({
-//         id:doc.id,
-//         ...doc.data(),
-//     }))
-   
-    
-//     setbuslist(buslist);
-   
-// });
-
-
-// }
-// imgurl();
-
-// const handleExploreClick = () => {
-//     document.getElementById('additional-content').scrollIntoView({ behavior: 'smooth' });
-//   };
-
-
- 
-// return(
-//         <div className='oveall-cont'>
-//             <Nav /*nchild={child}*//>
-
-//                 <div>
-//                           {/* Home */}
-//       <div className="video-background-container">
-//                 <video className="video-background" autoPlay loop muted>
-//                     <source src={videoSource} type="video/mp4" />
-//                     Your browser does not support the video tag.
-//                 </video>
-//       <div className="Home d-flex align-items-center">
-//         <div className="container bg-transparent border-0">
-//           <div className="row">
-//             <div className="col-md-6 text-center text-md-start">
-//               <h3 className="display-4 slide-up">Book Your Journey With Us!</h3>
-//               <p className="lead">Book a trip and make unlimited memories with your friends</p>
-//               <div className="input-group mb-3">
-//                 <input type="text" className="form-control" placeholder="Search for bus"/>
-//                 <button className="btn btn-primary" type="button">Search</button>
-//               </div>
-//               <button className="btn btn-secondary mt-3" onClick={handleExploreClick}>Explore Now</button>
-//             </div>
-//             {/* <div className="col-md-6 d-none d-md-block"></div> */}
-//           </div>
-//         </div>
-//       </div>
-//       </div>
-//   </div>
-
-               
-                
-         
-      
-
-
-
-
-
-//             <Footer/>
-// </div>
-
-
-
-
-
-     
-    
-//     );
-// }
-// export default App;
-
-
-
-
-
-
 
 import React, { useState ,useEffect} from 'react';
 import { db } from './config/firebase';
@@ -102,7 +6,6 @@ import './nav1.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
-import logo from './images/bl.png';
 import Foot from './footall';
 import videoSource from './images/bgvideo (2).mp4';
 import Nav from './nav1';

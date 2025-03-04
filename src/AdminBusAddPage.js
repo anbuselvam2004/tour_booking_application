@@ -1,6 +1,6 @@
 import React,{  useState } from "react";
 import { Store,auth,db } from "./config/firebase";
-import { collection,addDoc,getDocs } from "firebase/firestore";
+import { collection,addDoc } from "firebase/firestore";
 import { getDownloadURL, ref,uploadBytesResumable } from "firebase/storage";
 import image from './images/bl.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +15,7 @@ import Footer from "./footall";
 
  function AdminBusPage(){
     const hist=useNavigate();
-    const [link1,link2]=useState([]);
+    // const [link1,link2]=useState([]);
     const [multipleFiles,setMultipleFiles]=useState([]);
     const [name,newname]=useState("");
     const [file,setFile]=useState(null);
@@ -28,7 +28,7 @@ import Footer from "./footall";
     const [progress,setprogress]=useState(0);
     const [downloadurl,setdownloadurl]=useState("");
     const [downloadurls,setdownloadurls]=useState([]);
-
+  console.log(downloadurl+downloadurls)
     const [errors, setErrors] = useState({});
 
   let urlimg="";
@@ -121,7 +121,7 @@ import Footer from "./footall";
 
 
         const dat=auth.currentUser;
-        if(dat.email==email){
+        if(dat.email===email){
         try{
        await uploadSingle();
         //--------------------------------------------------------------
@@ -284,7 +284,6 @@ const UploadMultiple = async () => {
   }
 
   const uploadPromises = [];
-  const urls = [];
 
   multipleFiles.forEach((file) => {
       const storageRef = ref(Store, `uploads/multiple/${file.name}`);
